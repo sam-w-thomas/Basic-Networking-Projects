@@ -47,7 +47,7 @@ class EIGRP_Metric:
     def calculate_metric(self):
         bandwidth = 10 ** 7 / self._minbandwidth
         load = self._load
-        delay = self._delay / 10 #Wide metric delay, latency, has conflicting discussions. ENCOR study guide is used as reference
+        delay = self._delay / 10 #RFC 7868 used as reference. Exception: Microseconds is used as input, not picoseconds
         if(self._k6 > 0):
             reliability = self._k5 / self._k6 + self._reliability
         else:
