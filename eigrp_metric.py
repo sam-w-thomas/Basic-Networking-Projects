@@ -8,7 +8,6 @@ class EIGRP_Metric:
     :paramter arg4: Reliability [optional]
     :paramter arg5: Extended - Jitter and Energy [optional, wide metrics only]
     :paramter arg6: Set to True to use Wide Metrics
-    :return: Prints metric when created.
     """
 
     def __init__(self, minbandwidth, delay, load=0, reliability=0, extended=0, wide=False):
@@ -36,7 +35,7 @@ class EIGRP_Metric:
         :param k3: Delay
         :param k4: Load
         :param k5: Reliability
-        :param k6: Extended - Jitter and
+        :param k6: Extended - Jitter and Energy
         """
         self._k1 = k1
         self._k2 = k2
